@@ -9,7 +9,7 @@ int secondLargest(int *arr,int n){
 			largest=arr[i];
 		}
 		else if(arr[i]<largest && arr[i]>secondLargest){
-			secondlargest=arr[i];
+			secondLargest=arr[i];
 		}
 	}
 return secondLargest;
