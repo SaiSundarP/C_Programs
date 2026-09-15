@@ -2,16 +2,16 @@
 
 #include <stdio.h>
 
-int houseRobber(int *a,int size){
+int houseRobber(int *cost,int size){
     int dp[size];
-    int dp[0]=cost[0];
-    int dp[1]=cost[1];
+    dp[0]=cost[0];
+    dp[1]=cost[1];
     for(int i=2;i<size;i++){
-        int current=cost[i]+(dp[i-2]>dp[1-1]?dp[i-2]:dp[i-1]);
+        int current=(dp[i-2]>dp[i-1]?dp[i-2]:dp[i-1]);
         dp[i-2]=dp[i-1];
         dp[i-1]=current;
     }
-    return (dp[i-2]>dp[i-1]?dp[i-2]:dp[i-1]);
+    return (dp[size-1]);
 }
 
 int main(){

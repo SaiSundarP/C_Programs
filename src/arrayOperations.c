@@ -1,21 +1,6 @@
 #include <stdio.h>
-//#include "my_lib/removeDuplicatesHash.h"
+#include "../my_lib/removeDuplicatesHash.h"
 //#include "complexity.h"
-
-void removeDuplicatesHash(int *arr, int size, int *result,int *resultSize)
-{
-    // Implementation for removing duplicates using hash set which runs in O(n) time complexity and O(n) space complexity.
-    int seen[1000]={}; // Assuming a maximum size for the hash set
-    int resultIndex = 0;
-
-    for (int i = 0; i < size; i++) {
-        if (!seen[arr[i]]) {
-            seen[arr[i]] = 1; // Mark the element as seen
-            result[resultIndex++] = arr[i]; // Add unique element to result
-        }
-    }
-    *resultSize = resultIndex;
-}
 
 int main()
 {
